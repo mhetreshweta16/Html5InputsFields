@@ -56,6 +56,26 @@ text2.addEventListener('input',function()
 
 });
 
+//UC5
+const text3=document.querySelector('#password');
+const textError3=document.querySelector('.text-errorp');
+text3.addEventListener('input',function()
+{
+     let nameRegex3=RegExp('^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8}$');
+     if(nameRegex3.test(text3.value))
+     {  
+         textError3.textContent=" ";
+     }
+     else
+     {
+         textError3.textContent="incorrect psw";
+
+     }
+
+
+});
+
+
 const salary=document.querySelector('#salary');
 const output=document.querySelector('.salary-output');
 output.textContent=salary.value;
