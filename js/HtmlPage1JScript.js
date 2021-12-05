@@ -23,14 +23,33 @@ const text1=document.querySelector('#email');
 const textError1=document.querySelector('.text-error1');
 text1.addEventListener('input',function()
 {
-     let nameRegex=RegExp('^[a-z]{3}[.][a-z]*[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[a-z]*$');
-     if(nameRegex.test(text1.value))
+     let nameRegex1=RegExp('^[a-z]{3}[.][a-z]*[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[a-z]*$');
+     if(nameRegex1.test(text1.value))
      {  
          textError1.textContent=" ";
      }
      else
      {
          textError1.textContent="incorrect email";
+
+     }
+
+
+});
+
+//UC3
+const text2=document.querySelector('#number');
+const textError2=document.querySelector('.text-error2');
+text2.addEventListener('input',function()
+{
+     let nameRegex2=RegExp('^[0-9]{10}$');
+     if(nameRegex2.test(text2.value))
+     {  
+         textError2.textContent=" ";
+     }
+     else
+     {
+         textError2.textContent="incorrect number";
 
      }
 
